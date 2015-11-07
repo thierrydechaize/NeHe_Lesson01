@@ -1,0 +1,21 @@
+Warning: The selected output language "french" has not been updated
+since release 1.8.0.  As a result some sentences may appear in English.
+
+C:/src/OpenGL/Lesson01/Lesson01.c:41: warning: Found unknown command `\Program'
+C:/src/OpenGL/Lesson01/Lesson01.c:179: warning: explicit link request to 'Point' could not be resolved
+C:/src/OpenGL/Lesson01/Lesson01.c:172: warning: argument 'HWND' of command @param is not found in the argument list of WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+C:/src/OpenGL/Lesson01/Lesson01.c:172: warning: argument 'UINT' of command @param is not found in the argument list of WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+C:/src/OpenGL/Lesson01/Lesson01.c:172: warning: argument 'WPARAM' of command @param is not found in the argument list of WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+C:/src/OpenGL/Lesson01/Lesson01.c:172: warning: argument 'LPARAM' of command @param is not found in the argument list of WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+C:/src/OpenGL/Lesson01/Lesson01.c:172: warning: The following parameters of WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) are not documented:
+  parameter 'hwnd'
+  parameter 'uMsg'
+  parameter 'wParam'
+  parameter 'lParam'
+Problems running dot: exit code=-1, command='dot', arguments='"C:/src/OpenGL/Lesson01/doxygen/latex/_lesson01_8c__incl.dot" -Tpdf -o "C:/src/OpenGL/Lesson01/doxygen/latex/_lesson01_8c__incl.pdf"'
+Problems running dot: exit code=-1, command='dot', arguments='"C:/src/OpenGL/Lesson01/doxygen/html/graph_legend.dot" -Tpng -o "C:/src/OpenGL/Lesson01/doxygen/html/graph_legend.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"C:/src/OpenGL/Lesson01/doxygen/rtf/_lesson01_8c__incl.dot" -Tpng -o "C:/src/OpenGL/Lesson01/doxygen/rtf/_lesson01_8c__incl.png"'
+Problems running dot: exit code=-1, command='dot', arguments='"C:/src/OpenGL/Lesson01/doxygen/html/_lesson01_8c__incl.dot" -Tpng -o "C:/src/OpenGL/Lesson01/doxygen/html/_lesson01_8c__incl.png"'
+error: problems opening map file C:/src/OpenGL/Lesson01/doxygen/html/_lesson01_8c__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

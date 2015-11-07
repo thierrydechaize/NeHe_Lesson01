@@ -1,0 +1,145 @@
+\hypertarget{_lesson01_8c}{\section{RÃ©fÃ©rence du fichier Lesson01.\-c}
+\label{_lesson01_8c}\index{Lesson01.\-c@{Lesson01.\-c}}
+}
+
+
+Ouvre une simple fenêtre Windows et dessine un triangle muticolore en rotation avec Open\-G\-L.  
+
+
+{\ttfamily \#include $<$windows.\-h$>$}\\*
+{\ttfamily \#include $<$gl/gl.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}resource.\-h\char`\"{}}\\*
+Graphe des dÃ©pendances par inclusion de Lesson01.\-c\-:
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+L\-R\-E\-S\-U\-L\-T C\-A\-L\-L\-B\-A\-C\-K \hyperlink{_lesson01_8c_af7de05620634745d22ea79adeef2514f}{Window\-Proc} (H\-W\-N\-D hwnd, U\-I\-N\-T u\-Msg, W\-P\-A\-R\-A\-M w\-Param, L\-P\-A\-R\-A\-M l\-Param)
+\begin{DoxyCompactList}\small\item\em Fonction C\-A\-L\-L\-B\-A\-C\-K de traitement des messages Windows. \end{DoxyCompactList}\item 
+void \hyperlink{_lesson01_8c_a3f1d8020cc3dcf306710f0e74385d3b4}{Enable\-Open\-G\-L} (H\-W\-N\-D hwnd, H\-D\-C $\ast$h\-D\-C, H\-G\-L\-R\-C $\ast$h\-R\-C)
+\begin{DoxyCompactList}\small\item\em Fonction Enable\-Open\-G\-L permettant la configuration d'Open\-G\-L pour la fenêtre principale. \end{DoxyCompactList}\item 
+void \hyperlink{_lesson01_8c_a90bd4ce009c06870ec5a57a16b8d7b3a}{Disable\-Open\-G\-L} (H\-W\-N\-D hwnd, H\-D\-C h\-D\-C, H\-G\-L\-R\-C h\-R\-C)
+\begin{DoxyCompactList}\small\item\em Fonction Disable\-Open\-G\-L permettant la dé-\/configuration d'Open\-G\-L pour la fenêtre principale. \end{DoxyCompactList}\item 
+\hypertarget{_lesson01_8c_a661c2abc03926acfaeb93b4ae7db4943}{int W\-I\-N\-A\-P\-I {\bfseries Win\-Main} (H\-I\-N\-S\-T\-A\-N\-C\-E h\-Instance, H\-I\-N\-S\-T\-A\-N\-C\-E h\-Prev\-Instance, L\-P\-S\-T\-R lp\-Cmd\-Line, int n\-Cmd\-Show)}\label{_lesson01_8c_a661c2abc03926acfaeb93b4ae7db4943}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description dÃ©taillÃ©e}
+Ouvre une simple fenêtre Windows et dessine un triangle muticolore en rotation avec Open\-G\-L. \begin{DoxyVerb}      Comments manageable by Doxygen
+\end{DoxyVerb}
+
+
+Modified smoothly by Thierry D\-E\-C\-H\-A\-I\-Z\-E
+
+Paradigm \-: obtain one source (only one !) compatible for multiple free C Compilers and provide for all users an development environment on Windows (64 bits compatible), the great Code\-::\-Blocks manager (version 12.\-11), and don't use glaux.\-lib or glaux.\-dll. \begin{DoxyVerb}a) Mingw 32 and 64 bits : downloadable http://sourceforge.net/projects/mingw/
+\end{DoxyVerb}
+ b) Mingw 32 and 64 bits \-: included in packages Orwell in replacement of old Dev-\/\-Cpp \href{http://sourceforge.net/projects/orwelldevcpp/}{\tt http\-://sourceforge.\-net/projects/orwelldevcpp/} (two installations in different place) c) Mingw 32 \-: included in package Code\-::\-Blocks (version 12.\-11) \href{http://sourceforge.net/projects/codeblocks/files/Binaries/12.11/Windows/}{\tt http\-://sourceforge.\-net/projects/codeblocks/files/\-Binaries/12.\-11/\-Windows/} d) Borland C \-: downloadable \href{http://edn.embarcadero.com/article/20633}{\tt http\-://edn.\-embarcadero.\-com/article/20633} e) Digital Mars Compiler C \-: version 8.\-56 downloadable \href{http://www.digitalmars.com}{\tt http\-://www.\-digitalmars.\-com} f) Open\-Watcom \-: version 1.\-9 downloadable \href{http://openwatcom.mirror.fr/}{\tt http\-://openwatcom.\-mirror.\-fr/} g) Lcc and Lcc64 \-: downloadable \href{http://www.cs.virginia.edu/~lcc-win32/}{\tt http\-://www.\-cs.\-virginia.\-edu/$\sim$lcc-\/win32/} h) Cygwin \-: downloadable \href{http://www.cygwin.com/install.html}{\tt http\-://www.\-cygwin.\-com/install.\-html} (setup.\-exe) i) and Visual Studio 2005 \-: express edition for free (my version 2005 is full not express) \href{http://www.microsoft.com/france/visual-studio/essayez/express.aspx}{\tt http\-://www.\-microsoft.\-com/france/visual-\/studio/essayez/express.\-aspx}
+
+Important remark \-: All install in C partition, \char`\"{}no space\char`\"{} and \char`\"{}no special characters\char`\"{} in the name of directories (it's reason to not install in C\-: Files (x86) ... by default proposed on windows 64 bits)
+
+Add resource file end resource header for restitute version + icon Open\-G\-L.\-ico for fun because versionning is important, same for freeware \-:-\/) !
+
+Date \-: 2013/05/11
+
+\begin{DoxyAuthor}{Auteur}
+Jeff Molofee ( Ne\-He ) originely, adapted by Thierry Dechaize 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0.\-1.\-2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 May 2013
+\end{DoxyDate}
+Ce programme ne gére qu'un seul événement \-: le clic sur le bouton \char`\"{}\-Fermé\char`\"{} de la fenêtre. 
+
+\subsection{Documentation des fonctions}
+\hypertarget{_lesson01_8c_a90bd4ce009c06870ec5a57a16b8d7b3a}{\index{Lesson01.\-c@{Lesson01.\-c}!Disable\-Open\-G\-L@{Disable\-Open\-G\-L}}
+\index{Disable\-Open\-G\-L@{Disable\-Open\-G\-L}!Lesson01.c@{Lesson01.\-c}}
+\subsubsection[{Disable\-Open\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Disable\-Open\-G\-L (
+\begin{DoxyParamCaption}
+\item[{H\-W\-N\-D}]{hwnd, }
+\item[{H\-D\-C}]{h\-D\-C, }
+\item[{H\-G\-L\-R\-C}]{h\-R\-C}
+\end{DoxyParamCaption}
+)}}\label{_lesson01_8c_a90bd4ce009c06870ec5a57a16b8d7b3a}
+
+
+Fonction Disable\-Open\-G\-L permettant la dé-\/configuration d'Open\-G\-L pour la fenêtre principale. 
+
+\begin{DoxyVerb}      Comments manageable by Doxygen
+\end{DoxyVerb}
+
+
+On libère les différents contextes \-: Device Context et Resource Context. 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em hwnd} & L'header de la fenêtre principale. \\
+\hline
+{\em h\-D\-C} & L'header du Device Context. \\
+\hline
+{\em h\-R\-C} & L'header du Resource Context sous Open\-G\-L. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Aucun Void. 
+\end{DoxyReturn}
+\hypertarget{_lesson01_8c_a3f1d8020cc3dcf306710f0e74385d3b4}{\index{Lesson01.\-c@{Lesson01.\-c}!Enable\-Open\-G\-L@{Enable\-Open\-G\-L}}
+\index{Enable\-Open\-G\-L@{Enable\-Open\-G\-L}!Lesson01.c@{Lesson01.\-c}}
+\subsubsection[{Enable\-Open\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Enable\-Open\-G\-L (
+\begin{DoxyParamCaption}
+\item[{H\-W\-N\-D}]{hwnd, }
+\item[{H\-D\-C $\ast$}]{h\-D\-C, }
+\item[{H\-G\-L\-R\-C $\ast$}]{h\-R\-C}
+\end{DoxyParamCaption}
+)}}\label{_lesson01_8c_a3f1d8020cc3dcf306710f0e74385d3b4}
+
+
+Fonction Enable\-Open\-G\-L permettant la configuration d'Open\-G\-L pour la fenêtre principale. 
+
+\begin{DoxyVerb}      Comments manageable by Doxygen
+\end{DoxyVerb}
+
+
+Ce qui est important est le descripteur du format du pixel utilisé. 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em hwnd} & L'header de la fenêtre principale. \\
+\hline
+{\em h\-D\-C} & L'header du Device Context. \\
+\hline
+{\em h\-R\-C} & L'header du Resource Context sous Open\-G\-L. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Aucun Void. 
+\end{DoxyReturn}
+\hypertarget{_lesson01_8c_af7de05620634745d22ea79adeef2514f}{\index{Lesson01.\-c@{Lesson01.\-c}!Window\-Proc@{Window\-Proc}}
+\index{Window\-Proc@{Window\-Proc}!Lesson01.c@{Lesson01.\-c}}
+\subsubsection[{Window\-Proc}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-E\-S\-U\-L\-T C\-A\-L\-L\-B\-A\-C\-K Window\-Proc (
+\begin{DoxyParamCaption}
+\item[{H\-W\-N\-D}]{hwnd, }
+\item[{U\-I\-N\-T}]{u\-Msg, }
+\item[{W\-P\-A\-R\-A\-M}]{w\-Param, }
+\item[{L\-P\-A\-R\-A\-M}]{l\-Param}
+\end{DoxyParamCaption}
+)}}\label{_lesson01_8c_af7de05620634745d22ea79adeef2514f}
+
+
+Fonction C\-A\-L\-L\-B\-A\-C\-K de traitement des messages Windows. 
+
+\begin{DoxyVerb}      Comments manageable by Doxygen
+\end{DoxyVerb}
+
+
+La distance entre les {\itshape point1} et {\itshape point2} est calculée par l'intermédiaire des coordonnées des points. (cf \#\-Point) 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em H\-W\-N\-D} & L'header de la fenêtre principale. \\
+\hline
+{\em U\-I\-N\-T} & Un entier non signé. \\
+\hline
+{\em W\-P\-A\-R\-A\-M} & Les paramétres en entrée. \\
+\hline
+{\em L\-P\-A\-R\-A\-M} & Autres paramétres en entrée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un {\itshape L\-R\-E\-S\-U\-L\-T} donnant le status du traitement du message. 
+\end{DoxyReturn}
